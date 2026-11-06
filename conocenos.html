@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Conócenos · BeeTourism Boyacá</title>
+    <meta name="description" content="Conoce la historia de Black and Yellow Apicultura y a nuestros maestros apicultores tradicionales en Tibasosa, Boyacá.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="BeeTourism.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <a class="logo" href="BeeTourism.html" aria-label="BeeTourism inicio">
+            <img src="logo.png" alt="BeeTourism Boyacá Logo">
+            <span class="logo-text">Bee<strong>Tourism</strong></span>
+        </a>
+
+        <div class="nav-right">
+            <button class="nav-btn cart-btn" id="oc" aria-label="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b id="cn" data-n="0"></b>
+            </button>
+            <button class="nav-btn menu-btn" id="om" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="veil" id="veil"></div>
+
+    <aside id="side" aria-label="Menú de navegación">
+        <button class="btn-close" data-close aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="side-logo">
+            <img src="logo.png" alt="BeeTourism Logo" style="width: 38px; height: auto;">
+            <span>BeeTourism</span>
+        </div>
+        <nav>
+            <a href="BeeTourism.html">
+                <span class="nav-num">01</span>
+                Inicio
+            </a>
+            <a href="catalogo.html">
+                <span class="nav-num">02</span>
+                Catálogo de productos
+            </a>
+            <a href="guia-turistica.html">
+                <span class="nav-num">03</span>
+                Guía turística
+            </a>
+            <a href="experiencias.html">
+                <span class="nav-num">04</span>
+                Experiencias apícolas
+            </a>
+        </nav>
+        <p class="side-foot">Tibasosa, Boyacá - Colombia</p>
+    </aside>
+
+    <aside id="cart" aria-label="Carrito de compras">
+        <button class="btn-close" data-close aria-label="Cerrar carrito">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 class="cart-title"><i class="fa-solid fa-basket-shopping" style="color:var(--honey); margin-right:8px;"></i>Tu carrito</h2>
+        <div id="items"></div>
+        <div id="foot" class="hide">
+            <div class="tot">
+                <span>Total</span>
+                <span id="tot"></span>
+            </div>
+            <button class="btn-wa" id="wa-btn">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                Vamos a WhatsApp
+            </button>
+            <p class="cart-note">Coordinamos el pago y el despacho por WhatsApp.</p>
+        </div>
+    </aside>
+
+    <main>
+
+        <section class="page-hero" style="background-image: linear-gradient(rgba(35, 31, 27, 0.78), rgba(35, 31, 27, 0.88)), url('https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=1600&q=80');">
+            <span class="eyebrow">Nuestra Historia y Raíces</span>
+            <h1>Conócenos · Black and Yellow Apicultura</h1>
+            <p>Una familia campesina unida por el amor a las abejas, la conservación de la flora boyacense y la pasión por compartir la magia del apiario.</p>
+        </section>
+
+        <section class="bg-alt" style="padding-top: 50px;">
+            <div class="wrap two-col">
+                <div class="rv">
+                    <span class="eyebrow">Sobre nosotros</span>
+                    <h2>Nacidos del corazón del campo en Tibasosa</h2>
+                    <p>BeeTourism Boyacá es la expresión viva de Black and Yellow Apicultura, un emprendimiento familiar que inició hace casi tres décadas en las laderas andinas de Tibasosa con apenas tres colmenas artesanales de madera.</p>
+                    <p>Con el paso de los años, nuestra labor campesina trascendió la cosecha de miel pura para convertirse en una misión pedagógica y ecológica: enseñarle al mundo que las abejas no atacan, sino que defienden su hogar y que sin ellas la vida humana no podría sostenerse.</p>
+                    <p>Hoy cuidamos más de 20 colmenas saludables en entornos libres de monocultivos y químicos, abriendo las puertas de nuestro apiario a familias, estudiantes, turistas y amantes de la naturaleza que buscan reconectar con la tierra.</p>
+                </div>
+
+                <div class="rv">
+                    <span class="eyebrow">Nuestros Pilares</span>
+                    <div class="valores" style="margin-top: 10px;">
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <i class="fa-solid fa-heart" style="font-size: 20px; color: var(--honey-d);"></i>
+                            </div>
+                            <div>
+                                <strong>Pasión por las abejas</strong>
+                                <p>Cada colmena es respetada en sus tiempos biológicos, sin sobreexplotación ni azúcares artificiales.</p>
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <i class="fa-solid fa-leaf" style="font-size: 20px; color: var(--honey-d);"></i>
+                            </div>
+                            <div>
+                                <strong>Compromiso ambiental</strong>
+                                <p>Fomentamos la siembra de árboles nativos y flores melíferas que nutren a los polinizadores silvestres.</p>
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <i class="fa-solid fa-graduation-cap" style="font-size: 20px; color: var(--honey-d);"></i>
+                            </div>
+                            <div>
+                                <strong>Turismo educativo</strong>
+                                <p>Desmitificamos el miedo hacia las abejas y formamos a los visitantes como embajadores de su conservación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div style="text-align: center;">
+                    <span class="eyebrow">Sabiduría Campesina</span>
+                    <h2 class="rv" style="font-size: 28px; margin-top: 8px;">Nuestros Maestros Apicultores</h2>
+                    <p class="lead rv" style="max-width: 680px; margin: 10px auto 0;">Hombres del campo boyacense con décadas de experiencia dedicadas al arte, paciencia y cuidado de las abejas.</p>
+                </div>
+
+                <div class="beekeepers-grid">
+
+                    <article class="beekeeper-card rv">
+                        <img class="beekeeper-img" src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?auto=format&fit=crop&w=800&q=80" alt="Don José Ramírez, maestro apicultor">
+                        <div class="beekeeper-info">
+                            <h3>Don José Ramírez</h3>
+                            <span class="beekeeper-role">Maestro Apicultor y Cofundador</span>
+                            <p>Con más de 28 años dedicados al cuidado de las colmenas en Tibasosa. Conoce el lenguaje del zumbido y lidera con cariño y paciencia los recorridos guiados, asegurando que cada visitante se sienta en total calma y confianza.</p>
+                        </div>
+                    </article>
+
+                    <article class="beekeeper-card rv">
+                        <img class="beekeeper-img" src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&w=800&q=80" alt="Don Carlos Mendoza, especialista apícola">
+                        <div class="beekeeper-info">
+                            <h3>Don Carlos Mendoza</h3>
+                            <span class="beekeeper-role">Especialista en Manejo y Sanidad Apícola</span>
+                            <p>Más de 20 años de experiencia observando panales y multiplicando enjambres sin agroquímicos. Es el guardián de la salud de las reinas y de la preservación biológica de cada colmena en el apiario boyacense.</p>
+                        </div>
+                    </article>
+
+                    <article class="beekeeper-card rv">
+                        <img class="beekeeper-img" src="https://images.unsplash.com/photo-1588600878108-578307a3cc9d?auto=format&fit=crop&w=800&q=80" alt="Don Guillermo Becerra, maestro cosechador">
+                        <div class="beekeeper-info">
+                            <h3>Don Guillermo Becerra</h3>
+                            <span class="beekeeper-role">Maestro Cosechador y Guía de Campo</span>
+                            <p>Experto en el arte ancestral del desoperculado manual y centrifugado en frío. Amante de la botánica andina, comparte historias inolvidables sobre las flores silvestres que hacen única a la miel de Boyacá.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="cta-banner rv">
+                    <h2>Ven a conocer a nuestros maestros en persona</h2>
+                    <p>Visita nuestro apiario en Tibasosa y comparte un café o una infusión de miel mientras aprendes de quienes llevan toda su vida conviviendo con las colmenas.</p>
+                    <a class="btn-cta-wa" href="https://wa.me/573203065276?text=Hola%2C%20quisiera%20conocer%20el%20apiario%20y%20agendar%20una%20visita%20en%20BeeTourism" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Escríbenos por WhatsApp para agendar tu visita
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="BeeTourism Boyacá">
+                    <span>BeeTourism Boyacá</span>
+                </div>
+                <p class="footer-desc">Promovemos el apiturismo regenerativo, la educación ambiental y el cuidado ético de las abejas en Tibasosa. Conectamos a las familias con la magia de la colmena boyacense.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/573203065276" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="BeeTourism.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Inicio</a></li>
+                    <li><a href="catalogo.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Catálogo de productos</a></li>
+                    <li><a href="guia-turistica.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Guía turística</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Experiencias apícolas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Actividades</h4>
+                <ul class="footer-links">
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Senderismo apícola</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Cata de mieles</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Bioconstrucción</a></li>
+                    <li><a href="BeeTourism.html#contacto"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Ubicación en Tibasosa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Tibasosa, Boyacá, Colombia</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+57 320 306 5276</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Lun a Dom: 7:00 am - 5:00 pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright <span id="yr"></span> Black and Yellow Apicultura · Creado con amor y paciencia de abeja</p>
+            <p>Tibasosa, Boyacá - Colombia</p>
+        </div>
+    </footer>
+
+    <div id="wa-alerta" class="wa-alerta hide">
+        <div class="wa-alerta-box">
+            <div class="wa-alerta-icon">
+                <i class="fa-brands fa-whatsapp" style="font-size: 38px; color: #25D366;"></i>
+            </div>
+            <h3>Producto agregado al carrito</h3>
+            <p>Tu pedido está listo. Para finalizar la compra, te llevamos directamente a WhatsApp donde coordinaremos el pago y el envío.</p>
+            <div class="wa-alerta-btns">
+                <button class="btn-wa-alerta" id="wa-alerta-ir">Vamos a WhatsApp</button>
+                <button class="btn-cancelar-alerta" id="wa-alerta-cerrar">Seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="BeeTourism.js"></script>
+
+</body>
+
+</html>
+

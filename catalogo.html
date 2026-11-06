@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Catálogo de Productos · BeeTourism Boyacá</title>
+    <meta name="description" content="Catálogo completo de productos de la colmena: miel pura, polen, propóleo, hidromiel y biocosmética artesanal en Tibasosa, Boyacá.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="BeeTourism.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <a class="logo" href="BeeTourism.html" aria-label="BeeTourism inicio">
+            <img src="logo.png" alt="BeeTourism Boyacá Logo">
+            <span class="logo-text">Bee<strong>Tourism</strong></span>
+        </a>
+
+        <div class="nav-right">
+            <button class="nav-btn cart-btn" id="oc" aria-label="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b id="cn" data-n="0"></b>
+            </button>
+            <button class="nav-btn menu-btn" id="om" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="veil" id="veil"></div>
+
+    <aside id="side" aria-label="Menú de navegación">
+        <button class="btn-close" data-close aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="side-logo">
+            <img src="logo.png" alt="BeeTourism Logo" style="width: 38px; height: auto;">
+            <span>BeeTourism</span>
+        </div>
+        <nav>
+            <a href="BeeTourism.html">
+                <span class="nav-num">01</span>
+                Inicio
+            </a>
+            <a href="guia-turistica.html">
+                <span class="nav-num">02</span>
+                Guía turística
+            </a>
+            <a href="conocenos.html">
+                <span class="nav-num">03</span>
+                Conócenos
+            </a>
+            <a href="experiencias.html">
+                <span class="nav-num">04</span>
+                Experiencias apícolas
+            </a>
+        </nav>
+        <p class="side-foot">Tibasosa, Boyacá - Colombia</p>
+    </aside>
+
+    <aside id="cart" aria-label="Carrito de compras">
+        <button class="btn-close" data-close aria-label="Cerrar carrito">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 class="cart-title"><i class="fa-solid fa-basket-shopping" style="color:var(--honey); margin-right:8px;"></i>Tu carrito</h2>
+        <div id="items"></div>
+        <div id="foot" class="hide">
+            <div class="tot">
+                <span>Total</span>
+                <span id="tot"></span>
+            </div>
+            <button class="btn-wa" id="wa-btn">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                Vamos a WhatsApp
+            </button>
+            <p class="cart-note">Coordinamos el pago y el despacho por WhatsApp.</p>
+        </div>
+    </aside>
+
+    <main>
+
+        <section class="page-hero" style="background-image: linear-gradient(rgba(35, 31, 27, 0.78), rgba(35, 31, 27, 0.88)), url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1600&q=80');">
+            <span class="eyebrow">Tienda Artesanal</span>
+            <h1>Catálogo de Productos de la Colmena</h1>
+            <p>Descubre nuestra variedad de mieles crudas, derivados terapéuticos y cosmética natural. Cosechados responsablemente en las montañas de Tibasosa, Boyacá.</p>
+        </section>
+
+        <section class="bg-alt" style="padding-top: 50px;">
+            <div class="wrap">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <span class="eyebrow">Filtra por categoría</span>
+                    <h2 class="rv" style="font-size: 28px; margin-top: 8px;">Explora nuestros productos</h2>
+                </div>
+
+                <div class="chips" id="chips"></div>
+                <div class="cgrid" id="cgrid"></div>
+
+                <div class="catalog-info-banner rv">
+                    <div class="catalog-info-icon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <div class="catalog-info-text">
+                        <h3>Garantía 100% Pura y Artesanal</h3>
+                        <p>Nuestra miel no es sometida a calor industrial ni mezclada con jarabes. Cada frasco conserva el polen vivo, los antioxidantes naturales y el aroma floral original del campo boyacense.</p>
+                    </div>
+                </div>
+
+                <div class="cta-banner rv">
+                    <h2>¿Tienes preguntas sobre algún producto?</h2>
+                    <p>Escríbenos directamente por WhatsApp y te asesoramos para elegir la miel o derivado apícola ideal según tus necesidades.</p>
+                    <a class="btn-cta-wa" href="https://wa.me/573203065276?text=Hola%2C%20quisiera%20asesoria%20sobre%20los%20productos%20del%20catalogo%20de%20BeeTourism" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Escríbenos a WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="BeeTourism Boyacá">
+                    <span>BeeTourism Boyacá</span>
+                </div>
+                <p class="footer-desc">Promovemos el apiturismo regenerativo, la educación ambiental y el cuidado ético de las abejas en Tibasosa. Conectamos a las familias con la magia de la colmena boyacense.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/573203065276" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="BeeTourism.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Inicio</a></li>
+                    <li><a href="guia-turistica.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Guía turística</a></li>
+                    <li><a href="conocenos.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Conócenos</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Experiencias apícolas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Actividades</h4>
+                <ul class="footer-links">
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Senderismo apícola</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Cata de mieles</a></li>
+                    <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Bioconstrucción</a></li>
+                    <li><a href="BeeTourism.html#contacto"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Contacto directo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Tibasosa, Boyacá, Colombia</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+57 320 306 5276</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Lun a Dom: 7:00 am - 5:00 pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright <span id="yr"></span> Black and Yellow Apicultura · Creado con amor y paciencia de abeja</p>
+            <p>Tibasosa, Boyacá - Colombia</p>
+        </div>
+    </footer>
+
+    <div id="wa-alerta" class="wa-alerta hide">
+        <div class="wa-alerta-box">
+            <div class="wa-alerta-icon">
+                <i class="fa-brands fa-whatsapp" style="font-size: 38px; color: #25D366;"></i>
+            </div>
+            <h3>Producto agregado al carrito</h3>
+            <p>Tu pedido está listo. Para finalizar la compra, te llevamos directamente a WhatsApp donde coordinaremos el pago y el envío.</p>
+            <div class="wa-alerta-btns">
+                <button class="btn-wa-alerta" id="wa-alerta-ir">Vamos a WhatsApp</button>
+                <button class="btn-cancelar-alerta" id="wa-alerta-cerrar">Seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="BeeTourism.js"></script>
+
+</body>
+
+</html>
+

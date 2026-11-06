@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Experiencias Apícolas · BeeTourism Boyacá</title>
+    <meta name="description" content="Conoce las experiencias apícolas en Tibasosa y los testimonios con fotos de quienes han visitado nuestro apiario andino.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="BeeTourism.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <a class="logo" href="BeeTourism.html" aria-label="BeeTourism inicio">
+            <img src="logo.png" alt="BeeTourism Boyacá Logo">
+            <span class="logo-text">Bee<strong>Tourism</strong></span>
+        </a>
+
+        <div class="nav-right">
+            <button class="nav-btn cart-btn" id="oc" aria-label="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b id="cn" data-n="0"></b>
+            </button>
+            <button class="nav-btn menu-btn" id="om" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="veil" id="veil"></div>
+
+    <aside id="side" aria-label="Menú de navegación">
+        <button class="btn-close" data-close aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="side-logo">
+            <img src="logo.png" alt="BeeTourism Logo" style="width: 38px; height: auto;">
+            <span>BeeTourism</span>
+        </div>
+        <nav>
+            <a href="BeeTourism.html">
+                <span class="nav-num">01</span>
+                Inicio
+            </a>
+            <a href="catalogo.html">
+                <span class="nav-num">02</span>
+                Catálogo de productos
+            </a>
+            <a href="guia-turistica.html">
+                <span class="nav-num">03</span>
+                Guía turística
+            </a>
+            <a href="conocenos.html">
+                <span class="nav-num">04</span>
+                Conócenos
+            </a>
+        </nav>
+        <p class="side-foot">Tibasosa, Boyacá - Colombia</p>
+    </aside>
+
+    <aside id="cart" aria-label="Carrito de compras">
+        <button class="btn-close" data-close aria-label="Cerrar carrito">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 class="cart-title"><i class="fa-solid fa-basket-shopping" style="color:var(--honey); margin-right:8px;"></i>Tu carrito</h2>
+        <div id="items"></div>
+        <div id="foot" class="hide">
+            <div class="tot">
+                <span>Total</span>
+                <span id="tot"></span>
+            </div>
+            <button class="btn-wa" id="wa-btn">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                Vamos a WhatsApp
+            </button>
+            <p class="cart-note">Coordinamos el pago y el despacho por WhatsApp.</p>
+        </div>
+    </aside>
+
+    <main>
+
+        <section class="page-hero" style="background-image: linear-gradient(rgba(35, 31, 27, 0.78), rgba(35, 31, 27, 0.88)), url('https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&w=1600&q=80');">
+            <span class="eyebrow">Apiturismo Vivencial</span>
+            <h1>Experiencias Apícolas en el Apiario</h1>
+            <p>Descubre lo que sienten y opinan nuestros visitantes al entrar en contacto directo con las abejas en el corazón de Tibasosa, Boyacá.</p>
+        </section>
+
+        <section class="bg-alt" style="padding-top: 50px;">
+            <div class="wrap">
+                <div style="text-align: center;">
+                    <span class="eyebrow">Planes disponibles</span>
+                    <h2 class="rv" style="font-size: 28px; margin-top: 8px;">Nuestras Experiencias Destacadas</h2>
+                    <p class="lead rv" style="max-width: 680px; margin: 10px auto 0;">Opciones diseñadas tanto para quienes nos visitan por primera vez como para familias y entusiastas de la apicultura.</p>
+                </div>
+
+                <div class="exp-grid" style="margin-top: 36px;">
+                    <div class="card rv">
+                        <div class="hex" style="background: #DDE9D3; color: #35302A;">S</div>
+                        <h3>Senderismo apícola</h3>
+                        <p>Recorrido guiado por el apiario y los senderos cercanos. Observamos las colmenas desde distancia segura y aprendemos sobre el comportamiento de las abejas.</p>
+                        <div class="meta">
+                            <span>2 a 3 horas</span>
+                            <span>Todo público</span>
+                            <span>Traje apícola incluido</span>
+                        </div>
+                    </div>
+
+                    <div class="card rv">
+                        <div class="hex" style="background: #F4DFB3; color: #35302A;">D</div>
+                        <h3>Degustación de mieles</h3>
+                        <p>Compara color, aroma y sabor de mieles uniflorales de distintas flores con un guía experto. Una experiencia sensorial única para toda la familia.</p>
+                        <div class="meta">
+                            <span>1 hora</span>
+                            <span>Desde 8 años</span>
+                            <span>Hasta 6 variedades</span>
+                        </div>
+                    </div>
+
+                    <div class="card rv">
+                        <div class="hex" style="background: #D3E0EC; color: #35302A;">T</div>
+                        <h3>Talleres de bioconstrucción</h3>
+                        <p>Aprende a construir con tierra, guadua y materiales locales. Descubre cómo se integran las construcciones ecológicas al entorno del apiario boyacense.</p>
+                        <div class="meta">
+                            <span>4 horas</span>
+                            <span>Cupos limitados</span>
+                            <span>Materiales incluidos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div style="text-align: center;">
+                    <span class="eyebrow">Opiniones y Testimonios</span>
+                    <h2 class="rv" style="font-size: 28px; margin-top: 8px;">Lo que dicen nuestros visitantes</h2>
+                    <p class="lead rv" style="max-width: 680px; margin: 10px auto 0;">Historias reales de personas que vivieron la experiencia apícola en nuestro apiario de Tibasosa.</p>
+                </div>
+
+                <div class="reviews-grid">
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1588600878108-578307a3cc9d?auto=format&fit=crop&w=600&q=80" alt="Mariana y Felipe en el apiario">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"¡Una experiencia absolutamente mágica! Al principio me daban pánico las abejas, pero Don José nos dio tanta confianza que terminé con una abeja en el guante admirándola. Y la miel fresca... inigualable."</p>
+                        <span class="review-author">Mariana & Felipe</span>
+                        <span class="review-badge">Senderismo Apícola · Bogotá</span>
+                    </article>
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=600&q=80" alt="Familia Castro en Tibasosa">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Fuimos con nuestros dos hijos de 9 y 12 años y quedaron fascinados. Aprendieron más de biología en 3 horas aquí que en todo el año escolar. Muy seguro y recomendadísimo para familias."</p>
+                        <span class="review-author">Familia Castro</span>
+                        <span class="review-badge">Apicultor por un Día · Tunja</span>
+                    </article>
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=600&q=80" alt="Andrés Camargo degustando miel">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"La cata de mieles fue una sorpresa total. Jamás imaginé que la miel de eucalipto pudiera tener un sabor tan mentolado y diferente. El paisaje de Tibasosa es espectacular."</p>
+                        <span class="review-author">Andrés Camargo</span>
+                        <span class="review-badge">Degustación de Mieles · Medellín</span>
+                    </article>
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&w=600&q=80" alt="Carolina y Juan Pablo con trajes de apicultor">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Un plan de fin de semana diferente, educativo y en paz con la naturaleza. La atención del equipo de BeeTourism es cálida y muy profesional. Volveremos sin duda alguna."</p>
+                        <span class="review-author">Carolina & Juan Pablo</span>
+                        <span class="review-badge">Senderismo Apícola · Bucaramanga</span>
+                    </article>
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=80" alt="Grupo Scout en taller de bioconstrucción">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Hicimos el taller de bioconstrucción y visitamos las colmenas. Entender el trabajo en equipo de las abejas nos inspiró a todos. Una verdadera lección de vida para los jóvenes."</p>
+                        <span class="review-author">Grupo Scout 14</span>
+                        <span class="review-badge">Taller Bioconstrucción · Duitama</span>
+                    </article>
+
+                    <article class="review-card rv">
+                        <div class="review-img-wrap">
+                            <img class="review-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Dra. Lucía con frasco de miel">
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Compré propóleo y miel multifloral después del recorrido y la calidad es pura, 100% real. Se nota el amor y respeto con el que cuidan a sus abejas en Tibasosa."</p>
+                        <span class="review-author">Dra. Lucía Valenzuela</span>
+                        <span class="review-badge">Experiencia Integral · Sogamoso</span>
+                    </article>
+
+                </div>
+
+                <div class="cta-banner rv">
+                    <h2>¿Listo para vivir tu propia experiencia apícola?</h2>
+                    <p>Escríbenos por WhatsApp para consultar fechas disponibles, tarifas por grupo y coordinar tu reserva en nuestro apiario de Tibasosa.</p>
+                    <a class="btn-cta-wa" href="https://wa.me/573203065276?text=Hola%2C%20quiero%20reservar%20una%20experiencia%20apicola%20en%20BeeTourism%20Boyaca" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Reserva tu experiencia por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="BeeTourism Boyacá">
+                    <span>BeeTourism Boyacá</span>
+                </div>
+                <p class="footer-desc">Promovemos el apiturismo regenerativo, la educación ambiental y el cuidado ético de las abejas en Tibasosa. Conectamos a las familias con la magia de la colmena boyacense.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/573203065276" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="BeeTourism.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Inicio</a></li>
+                    <li><a href="catalogo.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Catálogo de productos</a></li>
+                    <li><a href="guia-turistica.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Guía turística</a></li>
+                    <li><a href="conocenos.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Conócenos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Actividades</h4>
+                <ul class="footer-links">
+                    <li><a href="#experiencias"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Senderismo apícola</a></li>
+                    <li><a href="#experiencias"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Cata de mieles</a></li>
+                    <li><a href="#experiencias"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Bioconstrucción</a></li>
+                    <li><a href="catalogo.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Tienda artesanal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Tibasosa, Boyacá, Colombia</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+57 320 306 5276</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Lun a Dom: 7:00 am - 5:00 pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright <span id="yr"></span> Black and Yellow Apicultura · Creado con amor y paciencia de abeja</p>
+            <p>Tibasosa, Boyacá - Colombia</p>
+        </div>
+    </footer>
+
+    <div id="wa-alerta" class="wa-alerta hide">
+        <div class="wa-alerta-box">
+            <div class="wa-alerta-icon">
+                <i class="fa-brands fa-whatsapp" style="font-size: 38px; color: #25D366;"></i>
+            </div>
+            <h3>Producto agregado al carrito</h3>
+            <p>Tu pedido está listo. Para finalizar la compra, te llevamos directamente a WhatsApp donde coordinaremos el pago y el envío.</p>
+            <div class="wa-alerta-btns">
+                <button class="btn-wa-alerta" id="wa-alerta-ir">Vamos a WhatsApp</button>
+                <button class="btn-cancelar-alerta" id="wa-alerta-cerrar">Seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="BeeTourism.js"></script>
+
+</body>
+
+</html>
+
