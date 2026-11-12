@@ -13,7 +13,7 @@ var PRODUCTOS = [
         id: 1,
         nombre: "Miel multifloral pura",
         categoria: "Miel",
-        imagen: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+        imagen: "https://www.lanacion.com.ar/resizer/v2/cuales-son-los-tipos-de-miel-que-existen-foto-KWJGSVJFOVG6DKQBEOP4HT2LJY.jpg?auth=d82c5beacf81f5467eda033e8f4a501bfae62fa7525344566a42de4ddf4cec2c&width=420&height=560&quality=70&smart=true",
         descripcion: "Miel cremosa de floración andina en frasco de 500 g. Notas florales suaves y aroma silvestre.",
         precio: 28000,
         estado: "ok"
@@ -31,7 +31,7 @@ var PRODUCTOS = [
         id: 3,
         nombre: "Polen fresco deshidratado",
         categoria: "Polen",
-        imagen: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+        imagen: "https://blog.3bee.com/_next/image/?url=https%3A%2F%2Fapi-backend-assets.s3.eu-south-1.amazonaws.com%2Fprivate%2Ffiler_public%2F38%2Fbc%2F38bc98a0-cf1c-4b3e-bb4a-d342a1c738c1%2Fa3602c15-8dea-45b7-b3cc-5c4bde59cd6b.png&w=3840&q=75",
         descripcion: "Gránulos multicolores ricos en proteínas, aminoácidos y vitaminas. Frasco de 250 g.",
         precio: 30000,
         estado: "ok"
@@ -49,7 +49,7 @@ var PRODUCTOS = [
         id: 5,
         nombre: "Hidromiel dulce artesanal",
         categoria: "Hidromiel",
-        imagen: "https://images.unsplash.com/photo-1569919659476-f0852f6834b7?auto=format&fit=crop&w=800&q=80",
+        imagen: "https://www.lanacion.com.ar/resizer/v2/cuales-son-los-tipos-de-miel-que-existen-foto-KWJGSVJFOVG6DKQBEOP4HT2LJY.jpg?auth=d82c5beacf81f5467eda033e8f4a501bfae62fa7525344566a42de4ddf4cec2c&width=420&height=560&quality=70&smart=true",
         descripcion: "Bebida fermentada tradicional a base de miel pura y agua de manantial. Botella de 750 ml.",
         precio: 45000,
         estado: "low"
@@ -67,7 +67,7 @@ var PRODUCTOS = [
         id: 7,
         nombre: "Crema nutritiva con propóleo",
         categoria: "Biocosmeticos",
-        imagen: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
+        imagen: "https://blog.3bee.com/_next/image/?url=https%3A%2F%2Fapi-backend-assets.s3.eu-south-1.amazonaws.com%2Fprivate%2Ffiler_public%2F38%2Fbc%2F38bc98a0-cf1c-4b3e-bb4a-d342a1c738c1%2Fa3602c15-8dea-45b7-b3cc-5c4bde59cd6b.png&w=3840&q=75",
         descripcion: "Crema facial y corporal regeneradora para piel sensible con extracto de propóleo. Pote de 60 g.",
         precio: 26000,
         estado: "ok"
@@ -87,6 +87,7 @@ var EXPERIENCIAS = [
     {
         emoji: "S",
         titulo: "Senderismo apícola",
+        imagen: "IMG/foto1.png",
         descripcion: "Recorrido guiado por el apiario y los senderos cercanos. Observamos las colmenas desde distancia segura y aprendemos sobre el comportamiento de las abejas.",
         duracion: "2 a 3 horas",
         publico: "Todo público",
@@ -95,6 +96,7 @@ var EXPERIENCIAS = [
     {
         emoji: "D",
         titulo: "Degustación de mieles",
+        imagen: "IMG/foto2.png",
         descripcion: "Compara color, aroma y sabor de mieles uniflorales de distintas flores con un guía experto. Una experiencia sensorial única para toda la familia.",
         duracion: "1 hora",
         publico: "Desde 8 años",
@@ -103,6 +105,7 @@ var EXPERIENCIAS = [
     {
         emoji: "T",
         titulo: "Talleres de bioconstrucción",
+        imagen: "IMG/foto3.png",
         descripcion: "Aprende a construir con tierra, guadua y materiales locales. Descubre cómo se integran las construcciones ecológicas al entorno del apiario boyacense.",
         duracion: "4 horas",
         publico: "Cupos limitados",
@@ -215,6 +218,13 @@ if (track) {
     var productosCarrusel = PRODUCTOS.filter(function (p) { return p.estado !== "out"; });
     track.innerHTML = productosCarrusel.map(crearTarjetaProducto).join("");
 
+    function obtenerPasoCarrusel() {
+        if (track.children.length > 1) {
+            return track.children[1].offsetLeft - track.children[0].offsetLeft;
+        }
+        return track.firstElementChild ? track.firstElementChild.offsetWidth + 24 : 0;
+    }
+
     var dotContainer = buscar("#carousel-dots");
     if (dotContainer) {
         productosCarrusel.forEach(function (_, indice) {
@@ -226,8 +236,8 @@ if (track) {
         });
 
         function actualizarPuntos() {
-            var ancho = track.firstElementChild ? track.firstElementChild.offsetWidth + 20 : 0;
-            var indiceActual = Math.round(track.scrollLeft / ancho);
+            var ancho = obtenerPasoCarrusel();
+            var indiceActual = ancho ? Math.round(track.scrollLeft / ancho) : 0;
             document.querySelectorAll(".dot").forEach(function (dot, i) {
                 dot.classList.toggle("active", i === indiceActual);
             });
@@ -239,7 +249,7 @@ if (track) {
             var dot = evento.target.closest("[data-indice]");
             if (!dot) return;
             var indice = parseInt(dot.getAttribute("data-indice"));
-            var ancho = track.firstElementChild ? track.firstElementChild.offsetWidth + 20 : 0;
+            var ancho = obtenerPasoCarrusel();
             track.scrollTo({ left: ancho * indice, behavior: "smooth" });
         });
 
@@ -250,7 +260,7 @@ if (track) {
     var nextBtn = buscar("#next");
     if (nextBtn) {
         nextBtn.addEventListener("click", function () {
-            var ancho = track.firstElementChild ? track.firstElementChild.offsetWidth + 20 : 0;
+            var ancho = obtenerPasoCarrusel();
             track.scrollBy({ left: ancho, behavior: "smooth" });
         });
     }
@@ -258,14 +268,14 @@ if (track) {
     var prevBtn = buscar("#prev");
     if (prevBtn) {
         prevBtn.addEventListener("click", function () {
-            var ancho = track.firstElementChild ? track.firstElementChild.offsetWidth + 20 : 0;
+            var ancho = obtenerPasoCarrusel();
             track.scrollBy({ left: -ancho, behavior: "smooth" });
         });
     }
 
     function iniciarAutoplay() {
         return setInterval(function () {
-            var ancho = track.firstElementChild ? track.firstElementChild.offsetWidth + 20 : 0;
+            var ancho = obtenerPasoCarrusel();
             var maximo = track.scrollWidth - track.clientWidth;
             if (track.scrollLeft >= maximo - 10) {
                 track.scrollTo({ left: 0, behavior: "smooth" });
@@ -319,19 +329,24 @@ if (chipsContainer && cgridContainer) {
 
 var contenedorExps = buscar("#exps");
 if (contenedorExps) {
-    var coloresExp = { "S": "#DDE9D3", "D": "#F4DFB3", "T": "#D3E0EC" };
+    var coloresExp = { "S": "#FFD621", "D": "#F4C430", "T": "#E8A81A" };
     contenedorExps.innerHTML = EXPERIENCIAS.map(function (exp) {
-        var colorExp = coloresExp[exp.emoji] || "#EADFC8";
-        return '<div class="card rv">' +
-            '<div class="hex" style="background: ' + colorExp + '; color: #35302A;">' +
+        var colorExp = coloresExp[exp.emoji] || "#FFD621";
+        return '<div class="exp-item rv">' +
+            '<img class="exp-item-img" src="' + exp.imagen + '" alt="' + exp.titulo + '">' +
+            '<div class="exp-item-info">' +
+            '<div class="exp-item-encabezado">' +
+            '<div class="hex" style="background: ' + colorExp + '; color: #2B2620;">' +
             exp.emoji +
             '</div>' +
             '<h3>' + exp.titulo + '</h3>' +
+            '</div>' +
             '<p>' + exp.descripcion + '</p>' +
             '<div class="meta">' +
             '<span>' + exp.duracion + '</span>' +
             '<span>' + exp.publico + '</span>' +
             '<span>' + exp.incluye + '</span>' +
+            '</div>' +
             '</div>' +
             '</div>';
     }).join("");
